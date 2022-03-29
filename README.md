@@ -16,13 +16,13 @@ We are provided with 2 files - train.csv and test.csv
 
 train.csv contains the customer demographics and past activity with the bank. And also the target label representing whether the customer will churn or not.
 
-![](train.png)
+![](train.PNG)
 
 # Test set
 
 test.csv contains the customer demographics and past activity with the bank. And you need to predict whether the customer will churn or not.
 
-![](test.png)
+![](test.PNG)
 
 # Evaluation metric
 
