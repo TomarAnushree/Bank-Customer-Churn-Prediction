@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Home Page</title>
+    <link  rel="stylesheet" type="text/css" href="../static/result.css">
+
+</head>
+
+<body>
+
+
+
+    <header id = "header">
+
+        <h1>Predict Attrition(Churn) of Customer  </h1>
+
+    </header>
+    <br><br>
+
+
+    <div id = "result">
+       
+    {%if data == 0%}
+    
+    <h3>This Customer will not churn.<br>
+    
+    {% else %}
+
+    <h3>This Customer will most likely churn</h3>
+
+
+    {%  endif  %}
+
+
+    </div>
+
+<div id = "login">
+
+    <a href="/">Prediction Home Page</a>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>

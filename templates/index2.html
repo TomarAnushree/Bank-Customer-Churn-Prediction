@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Churn Prediction</title>
+
+<link  rel="stylesheet" type="text/css" href="../static/style.css">
+
+
+
+</head>
+
+<body>
+
+
+
+
+    {% if error %}
+
+    <div id = "error_message">
+        
+    
+           {{error}}
+    
+        </div>
+
+    {% endif %}
+
+
+
+
+    <div id="contact-form">
+
+
+        <div>
+          <h1>Predict Attrition (churn) of Customers</h1> 
+          <br>
+          <h4>Please Enter the Following Parameters....</h4> 
+        </div>
+          
+      
+             <form method="POST", action="{{url_for('home')}}">
+             
+                          
+             <div>
+                 <label for="Age">
+                   <span class="required">Enter Age: </span> 
+                   <input type="number"  id="Age" name="age" value="" placeholder="Please enter age" required="required" tabindex="1" autofocus="autofocus" />
+                 </label> 
+             </div>
+             
+           
+            <div>             
+                <label for="Gender" placeholder = "Please choose a gender">
+                <span>Please Choose a Gender: </span>
+                    <select id="Gender" name="gender" tabindex="4">   
+                        <option value=1>Male</option>
+                        <option value=0>Female</option>  
+                    </select>
+                </label>
+            </div>
+
+            <div>             
+                <label for="Income" placeholder = "Please choose yearly income">
+                <span>Please Choose Yearly Income:</span>
+                    <select id="Income" name="income" tabindex="4">   
+                        <option value="1">5L - 10L</option>
+                        <option value="0">10L - 15L</option>
+                        <option value="2">Less than 5L</option>
+                        <option value="3">More than 15L</option>
+                        
+                    </select>
+                </label>
+            </div>
+
+
+            
+            <div>
+                <label for="Balance">
+                  <span class="required">Enter Average Quarterly Balance: </span> 
+                  <input type="number"  id="Balance" name="balance" value="" placeholder="Please enter average quaterly balance" required="required" tabindex="1" autofocus="autofocus" />
+                </label> 
+            </div>
+            
+            <div>
+                <label for="Vintage">
+                  <span class="required">Enter Years of Assocition: </span> 
+                  <input type="number"  id="Vintage" name="vintage" value="" placeholder="Please enter years of association" required="required" tabindex="1" autofocus="autofocus" />
+                </label> 
+            </div>
+            
+            
+            
+            
+            <div>             
+                <label for="Transaction_Status" placeholder = "Please choose a Transaction Status">
+                <span>Please Choose a Transaction Status: </span>
+                    <select  id="Transaction_Status" name="ts" tabindex="4">   
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>                                              
+                    </select>
+                </label>
+            </div>
+
+
+
+
+            <div>
+                <label for="Product_Holdings">
+                  <span class="required">Enter Number of Product Holdings with Bank: </span> 
+                  <input type="number"  id="Product_Holdings" name="ph" value="" placeholder="Please enter number of product holdings" required="required" tabindex="1" autofocus="autofocus" />
+                </label> 
+            </div>
+
+            <div>             
+                <label for="Credit_Card" placeholder = "please choose a Credit Card Status">
+                <span>Please Choose a Credit Card Status: </span>
+                    <select  id="Credit_Card" name="ccard" tabindex="4">   
+                        <option value="1">Yes</option>
+                        <option value="0">No </option>                                              
+                    </select>
+                </label>
+            </div>
+            
+            <div>             
+                <label for="Credit_Category" placeholder = "please choose a Credit Category">
+                <span>Please Choose a Credit Category: </span>
+                    <select  id="Credit_Category" name="ccategory" tabindex="4">   
+                        <option value="1">Good</option>
+                        <option value="0">Average</option>   
+                        <option value="2">Poor</option>                                                                                        
+                    </select>
+                </label>
+            </div>
+            
+            
+            
+            <div>              
+                <button name="submit" type="submit" id="submit" >Predict</button> 
+            </div>
+             </form>
+      
+     </div>
+      
+      
+      
+    
+
+
+
+
+
+
+</body>
+</html>
